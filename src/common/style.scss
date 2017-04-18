@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 30px;
+}
+a{
+	text-decoration:none;
+	color:#000;
+}
+@mixin left($value: 0) {
+    float: left;
+    margin-right: $value;
+}
+
+.document {
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 700px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+h1 {
+    @extend .text-center;
+    font-size: 2.5rem;
+    line-height: 4rem;
+}
+
+.select-box {
+    padding: 10px 0;
+    margin-top: 20px;
+    select {
+        border: 1px solid #999;
+        border-radius: 10px;
+        background: #fff;
+        option {
+            text-align: center;
+        }
+    }
+}
+
+.result {
+    color: #FF223E;
+    font-weight: bolder;
+}
+.link-tab{
+	overflow:auto;
+	border-bottom:1px solid #999;
+	>div{
+		border:1px solid #999;
+		border-bottom:none;
+		a{
+			display: inline-block;
+			padding:10px;
+		}
+	}
+	>div:first-child{
+		margin-left:50px;
+		border-right:none;
+	}
+}
+.float-left{
+	@include left;
+}
+
+.is-selected{
+	background:#45FF3D;	
+	a{
+		color:#FFFFFF;
+	}
+}
